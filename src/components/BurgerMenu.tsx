@@ -39,7 +39,7 @@ const BurgerMenu = () => {
   return (
     <>
       <motion.div
-        className="flex flex-col w-10 h-6 items-end justify-between z-20"
+        className="flex flex-col w-10 h-6 items-end justify-between z-[300] cursor-pointer "
         animate={isOpen ? "open" : "close"}
         onClick={() => setIsOpen(!isOpen)}
         variants={container}
@@ -62,7 +62,7 @@ const BurgerMenu = () => {
         ></motion.div>
       </motion.div>
       <motion.div
-        className="absolute w-full h-full top-0 bg-white z-10 flex flex-col items-center justify-center gap-5 text-3xl font-bold"
+        className="absolute w-full h-screen top-0 bg-white z-50 flex flex-col items-center justify-center gap-5 text-3xl font-bold"
         animate={isOpen ? "open" : "close"}
         variants={menu}
       >

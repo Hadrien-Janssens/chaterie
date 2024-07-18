@@ -14,19 +14,21 @@ const Nav = () => {
   }, [location]);
 
   return (
-    <div className="flex justify-end h-12 items-center px-3">
-      <div className="grow">
-        {isHomePage ? null : (
-          <button
-            onClick={() => navigate(-1)}
-            className="border rounded-full px-2"
-          >
-            Retour
-          </button>
-        )}
-      </div>
+    <div className="sticky top-0 z-30 bg-white  mb-5">
+      <div className="flex justify-end h-12 w-full items-center px-3">
+        <div className="grow">
+          {isHomePage ? null : (
+            <button
+              onClick={() => navigate(-1)}
+              className="border rounded-full px-2"
+            >
+              Retour
+            </button>
+          )}
+        </div>
 
-      <BurgerMenu />
+        <BurgerMenu />
+      </div>
     </div>
   );
 };

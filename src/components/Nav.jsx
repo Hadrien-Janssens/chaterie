@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { useEffect, useState } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Nav = () => {
   const [isHomePage, setIsHomePage] = useState(true);
@@ -18,11 +19,8 @@ const Nav = () => {
       <div className="flex justify-end h-12 w-full items-center px-3">
         <div className="grow">
           {isHomePage ? null : (
-            <button
-              onClick={() => navigate(-1)}
-              className="border rounded-full px-2"
-            >
-              Retour
+            <button onClick={() => navigate(-1)} className="text-xl">
+              <FaArrowLeft />
             </button>
           )}
         </div>

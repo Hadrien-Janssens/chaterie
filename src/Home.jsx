@@ -16,10 +16,10 @@ const Home = () => {
           <img
             src={"/urban.jpeg"}
             alt="british black silver"
-            className="w-[300px]"
+            className="w-[250px]"
           ></img>
-          <div className="grow self-end relative -top-5">
-            <div className=" relative -top-10 left-24 italic text-xs">
+          <div className="grow self-end relative -top-5 -left-12">
+            <div className=" relative -top-10 left-20 italic text-xs">
               <p>Voici Urban</p>
             </div>
             <h1 className="text-4xl font-bold text-[#B38D7D] opacity-[70%]">
@@ -61,11 +61,11 @@ const Home = () => {
           <TitleSection title="Nos chats" />
           <div className="flex w-11/12 m-auto pt-3 justify-between">
             <div className="basis-[50%] text-center border-l-2 border-b-2 border-[#B38D7D] opacity-[67%] pb-3">
-              <div className="overflow-hidden max-h-[200px]">
+              <div className="overflow-hidden max-h-[200px] flex items-center justify-center">
                 <img
                   src={"/chatons.png"}
                   alt="dessin d'un chat"
-                  className="relative top-5 -left-5"
+                  className="relative top-8 h-[150px]"
                 ></img>
               </div>
 
@@ -78,11 +78,11 @@ const Home = () => {
               </div>
             </div>
             <div className="basis-[50%] text-center border-t-2 border-r-2 border-[#B38D7D] opacity-[67%] pb-3">
-              <div className="overflow-hidden max-h-[200px]">
+              <div className="overflow-hidden max-h-[200px] flex items-center justify-center ">
                 <img
-                  src={"/chatons.png"}
+                  src={"/reproducteurs.png"}
                   alt="dessin d'un chat"
-                  className="relative top-5 -left-5"
+                  className="relative h-[150px]"
                 ></img>
               </div>
               <h4 className="font-bold pb-1">Nos reproducteurs</h4>
@@ -121,11 +121,11 @@ const Home = () => {
         {/* CONTACT  */}
         <div className="m-5 relative ">
           <img
-            src={"/chat-rigolo.png"}
+            src={"/chat-rogolo.png"}
             width={150}
             height={150}
             alt="dessin de chat rigolo"
-            className="absolute -top-20"
+            className="absolute -top-16"
           />
           <div className="bg-[#97918D] p-3 relative">
             <div className="absolute border-[#B38D7D] opacity-[67%] border-b-4 border-l-4 w-32 h-full -bottom-3 -left-3"></div>
@@ -162,22 +162,18 @@ const Home = () => {
         </div>
         {/* NOUS TROUVER  */}
         <div className="flex bg-[#51687F] m-5 mt-12 p-3 items- justify-between relative">
-          <div className="basis-[70%]">
+          <div className="basis-[50%] grow">
             <h3 className="text-[#B38D7D] text-2xl font-bold  ">
               Nous trouver
             </h3>
-            <p className="text-white">
+            <p className="text-white py-2">
               Rue joseph Wauters 81, <br />
               Morlanwelz 7140
             </p>
             <Button>maps</Button>
           </div>
-          <div className="flex justify-end">
-            <img
-              src={"/maps.png"}
-              alt="carte géographique"
-              className=" w-1/2"
-            />
+          <div className="flex justify-end basis-[40%]">
+            <img src={"/maps.png"} alt="carte géographique" className=" " />
           </div>
           <div className=" absolute w-full h-full bg-[#837067] opacity-[40%] -z-10 -bottom-3 -left-3"></div>
         </div>

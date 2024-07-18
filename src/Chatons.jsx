@@ -7,13 +7,23 @@ const Chatons = () => {
   return (
     <div>
       <Nav />
-      <h1>Chatons disponible à l'adoption</h1>
+      <div className="relative ">
+        <h1 className="text-[#837067] opacity-[60%] text-2xl m-5 my-10">
+          Chatons disponible à l'adoption
+        </h1>
+        <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
+        <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div>
+        <img
+          src="/chatons-qui-joue.png"
+          className=" absolute -bottom-5 right-5 z-10"
+        />
+      </div>
       <CatCard />
       <CatCardReverse />
       <CatCard />
       <CatCardReverse />
-      <div className="m-10">
-        <div className=" text-justify">
+      <div className="m-5 my-10">
+        <div className=" text-justify relative m-5">
           <h5 className="text-center text-2xl text-[#837067] opacity-[60%] font-extrabold mb-4">
             Conditions d'adoption
           </h5>
@@ -35,9 +45,11 @@ const Chatons = () => {
             meilleur des familles et nous pourront refuser une adoption si
             celle-ci ne convient pas.
           </p>
+          <div className="absolute w-1/2 h-1/2 border-t-4 border-r-4 -top-5 -right-5  border-[#B38D7D] opacity-[63%]"></div>
+          <div className="absolute w-1/2 h-1/2 border-b-4 border-l-4 -bottom-5 -left-5  border-[#B38D7D] opacity-[63%]"></div>
         </div>
         {/* RESERVATION  */}
-        <div className="mt-5 ">
+        <div className="mt-10 ">
           <h4 className=" text-2xl text-[#837067] opacity-[60%] font-extrabold mb-4">
             Réservation
           </h4>

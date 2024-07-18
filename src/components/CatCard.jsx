@@ -20,7 +20,7 @@ const CatCard = () => {
         </div>
         <div className=" flex flex-col">
           <h3 className="text-[#837067] opacity-[60%] font-extrabold text-lg font-poetsenone">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 mt-5">
               Vanille
               <CgGenderMale className="text-2xl" />
             </div>

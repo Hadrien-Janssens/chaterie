@@ -32,7 +32,7 @@ const CatCard = () => {
           <div className="absolute w-[20%] h-[20%] border-[#B38D7D] border-b-4 border-r-4 bottom-5 right-5"></div>
         </div>
       </div>
-      <p className="text-justify mt-10 w-11/12 m-auto">
+      <p className="text-justify mt-5 mb-2 w-11/12 m-auto">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud{" "}

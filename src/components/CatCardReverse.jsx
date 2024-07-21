@@ -1,7 +1,8 @@
 import { CgGenderMale } from "react-icons/cg";
 
 import Button from "./Button";
-const CatCard = () => {
+import { NavLink } from "react-router-dom";
+const CatCard = ({ chaton }) => {
   return (
     <div className="bg-white  p-7 relative">
       <div className="flex flex-row-reverse justify-center gap-10">
@@ -21,12 +22,14 @@ const CatCard = () => {
         <div className=" flex flex-col">
           <h3 className="text-[#837067] opacity-[60%] font-extrabold text-lg font-poetsenone">
             <div className="flex items-center gap-1 mt-5">
-              Vanille
+              {chaton.name}
               <CgGenderMale className="text-2xl" />
             </div>
           </h3>
           <p className="font-medium mb-6">né le 05/07/2024</p>
-          <Button>Voir plus</Button>
+          <NavLink to={`/chaton/${chaton.id}`}>
+            <Button>Voir plus</Button>
+          </NavLink>
 
           <div className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-t-4 border-l-4 top-5 left-5"></div>
           <div className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-b-4 border-l-4 bottom-5 left-5"></div>

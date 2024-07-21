@@ -2,26 +2,30 @@ import Nav from "./components/Nav";
 import CatCard from "./components/CatCard";
 import CatCardReverse from "./components/CatCardReverse";
 import Footer from "./components/Footer";
+import { useParams } from "react-router-dom";
 
-const Chatons = () => {
+const Chatons = ({ chatons }) => {
   return (
     <div>
       <Nav />
       <div className="relative ">
-        <h1 className="text-[#837067] opacity-[60%] text-2xl m-5 my-10">
+        <h1 className="text-[#837067] opacity-[60%] text-2xl m-5 my-10 mt-7">
           Chatons disponible à l'adoption
         </h1>
-        <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
-        <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div>
+        {/* <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
+        <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div> */}
         <img
           src="/chatons-qui-joue.png"
-          className=" absolute -bottom-5 right-5 z-10"
+          className=" absolute -bottom-10 right-5 z-10 w-[80px]"
         />
       </div>
-      <CatCard />
-      <CatCardReverse />
-      <CatCard />
-      <CatCardReverse />
+      {chatons.map((chaton, key) =>
+        key % 2 == 0 ? (
+          <CatCard chaton={chaton} key={key} />
+        ) : (
+          <CatCardReverse chaton={chaton} key={key} />
+        )
+      )}
       <div className="m-5 my-10">
         <div className=" text-justify relative m-5">
           <h5 className="text-center text-2xl text-[#837067] opacity-[60%] font-extrabold mb-4">

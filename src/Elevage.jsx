@@ -10,11 +10,11 @@ const page = () => {
       <div className="m-5 text-justify">
         <div className="relative my-10">
           <TitleSection title="Qui sommes-nous?" />
-          <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
-          <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div>
+          {/* <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
+          <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div> */}
           <img
             src="/reproducteurs.png"
-            className=" absolute -bottom-8 right-5 z-10 w-[100px]"
+            className=" absolute -bottom-8 right-6 z-10 w-[100px]"
           />
         </div>
         <p className="mt-5">
@@ -59,16 +59,12 @@ const page = () => {
           N'hésitez pas à nous contacter pour découvrir notre élevage familial,
           où passion, dévouement et amour des chats sont les maîtres-mots.
         </p>
-        <div className="my-10 mt-24 relative">
+        <div className="my-10 mt-24 ">
           <TitleSection title="Nos conseils pour acceuillir votre chaton" />
-          <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
-          <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div>
-          <img
-            src="/chat-qui-marche.png"
-            className=" absolute -top-20 left-5 z-10 w-[70px]"
-          />
+          {/* <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
+          <div className="h-1 w-1/2 absolute -bottom-5 right-0 bg-[#51687F] opacity-[70%] "></div> */}
         </div>
-        <div className="p-3 bg-[#97918D] text-white relative my-16">
+        <div className="p-3 bg-[#97918D] text-white relative my-16 mt-10">
           <p>
             Afin que votre nouveau petit protégé ait le temps de s’adapter à
             vous lors de son arrivée, nous vous conseillons de venir le chercher
@@ -80,8 +76,12 @@ const page = () => {
           <div className="flex justify-end text-black">
             <Button>Lire plus</Button>
           </div>
-          <div className="absolute w-1/2 h-1/2 border-4 -z-10 -top-3 -right-3  border-[#B38D7D] opacity-[63%]"></div>
-          <div className="absolute w-1/2 h-1/2 border-4 -z-10 -bottom-3 -left-3  border-[#B38D7D] opacity-[63%]"></div>
+          {/* <div className="absolute w-1/2 h-1/2 border-4 -z-10 -top-3 -right-3  border-[#B38D7D] opacity-[63%]"></div>
+          <div className="absolute w-1/2 h-1/2 border-4 -z-10 -bottom-3 -left-3  border-[#B38D7D] opacity-[63%]"></div> */}
+          <img
+            src="/chat-qui-marche.png"
+            className=" absolute -top-[62px] right-5 z-10 w-[70px]"
+          />
         </div>
         <Footer />
       </div>

@@ -57,7 +57,7 @@ const Home = () => {
           </div>
         </div>
         {/* NOS CHATS  */}
-        <div className="m-5">
+        <div className="m-5 ">
           <TitleSection title="Nos chats" />
           <div className="flex w-11/12 m-auto pt-3 justify-between">
             <div className="basis-[50%] text-center border-l-2 border-b-2 border-[#B38D7D] opacity-[67%] pb-3">
@@ -95,7 +95,7 @@ const Home = () => {
           </div>
         </div>
         {/* NOS PRODUITS  */}
-        <div className="m-5 my-10">
+        {/* <div className="m-5 my-10">
           <TitleSection title="Nos produits" />
           <div className="flex gap-6 ">
             <CardProduct
@@ -117,9 +117,9 @@ const Home = () => {
           <div className="flex justify-end p-5">
             <Button>Boutique</Button>
           </div>
-        </div>
+        </div> */}
         {/* CONTACT  */}
-        <div className="m-5 relative ">
+        <div className="m-5 relative mt-20">
           <img
             src={"/chat-rogolo.png"}
             width={150}

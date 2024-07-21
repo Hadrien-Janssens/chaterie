@@ -15,7 +15,7 @@ const Nav = () => {
   }, [location]);
 
   return (
-    <div className="sticky top-0 z-30 bg-white  mb-5">
+    <div className="sticky top-0 z-30 bg-white  mb-5 backdrop-blur-md bg-white/30">
       <div className="flex justify-end h-12 w-full items-center px-3">
         <div className="grow">
           {isHomePage ? null : (

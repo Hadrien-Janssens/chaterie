@@ -13,9 +13,14 @@ const Home = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("EMAIL_JS_SERVICE", "template_d8ibw66", form.current, {
-        publicKey: "EMAIL_JS_PUBLIC_KEY",
-      })
+      .sendForm(
+        process.env.REACT_APP_EMAIL_JS_SERVICE,
+        "template_d8ibw66",
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");

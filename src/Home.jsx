@@ -12,7 +12,7 @@ const Home = () => {
       <Nav />
       <div className="overflow-hidden">
         {/* HEADER  */}
-        <div className="flex w-full ">
+        <div className="flex w-full relative -left-8 gap-7">
           <img
             src={"/urban.jpeg"}
             alt="british black silver"
@@ -20,7 +20,14 @@ const Home = () => {
           ></img>
           <div className="grow self-end relative -top-5 -left-12">
             <div className=" relative -top-10 left-20 italic text-xs">
-              <p>Voici Urban</p>
+              <div className="relative">
+                <p>Voici Urban</p>
+                <img
+                  src="/Group2.png"
+                  alt=""
+                  className="absolute -left-[115px] -top-[25px] w-[110px]"
+                />
+              </div>
             </div>
             <h1 className="text-4xl font-bold text-[#B38D7D] opacity-[70%]">
               Janssens Family
@@ -60,8 +67,8 @@ const Home = () => {
         <div className="m-5 ">
           <TitleSection title="Nos chats" />
           <div className="flex w-11/12 m-auto pt-3 justify-between">
-            <div className="basis-[50%] text-center border-l-2 border-b-2 border-[#B38D7D] opacity-[67%] pb-3">
-              <div className="overflow-hidden max-h-[200px] flex items-center justify-center">
+            <div className="basis-[50%] text-center border-l-2 border-b-2 border-[#B38D7D] opacity-[100%] pb-3 ">
+              <div className="overflow-hidden max-h-[200px] flex items-center justify-center z-50">
                 <img
                   src={"/chatons.png"}
                   alt="dessin d'un chat"
@@ -69,7 +76,10 @@ const Home = () => {
                 ></img>
               </div>
 
-              <h4 className="font-bold pb-1">Nos chatons</h4>
+              <h4 className="font-bold pb-1">
+                Nos <br />
+                chatons
+              </h4>
 
               <div className="flex justify-center">
                 <NavLink to={"/chatons"}>
@@ -77,7 +87,7 @@ const Home = () => {
                 </NavLink>
               </div>
             </div>
-            <div className="basis-[50%] text-center border-t-2 border-r-2 border-[#B38D7D] opacity-[67%] pb-3">
+            <div className="basis-[50%] text-center border-t-2 border-r-2 border-[#B38D7D] opacity-[100%] pb-3 -z-50">
               <div className="overflow-hidden max-h-[200px] flex items-center justify-center ">
                 <img
                   src={"/reproducteurs.png"}
@@ -85,7 +95,9 @@ const Home = () => {
                   className="relative h-[150px]"
                 ></img>
               </div>
-              <h4 className="font-bold pb-1">Nos reproducteurs</h4>
+              <h4 className="font-bold pb-1">
+                Nos <br /> reproducteurs
+              </h4>
               <div className="flex justify-center">
                 <NavLink to={"/reproducteurs"}>
                   <Button>Découvrir</Button>

@@ -1,12 +1,30 @@
-import React from "react";
 import Nav from "./components/Nav";
 import Button from "./components/Button";
 import TitleSection from "./components/TitleSection";
-import CardProduct from "./components/CardProduct";
 import Footer from "./components/Footer";
 import { NavLink } from "react-router-dom";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Home = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("EMAIL_JS_SERVICE", "template_d8ibw66", form.current, {
+        publicKey: "EMAIL_JS_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <>
       <Nav />
@@ -56,7 +74,7 @@ const Home = () => {
               notre élevage
             </p>
             <div className="flex justify-end">
-              <NavLink to={"/elevage"}>
+              <NavLink to={"/elevage/#"}>
                 <Button>Découvrir</Button>
               </NavLink>
             </div>{" "}
@@ -145,20 +163,27 @@ const Home = () => {
               Contactez-nous
             </h3>
             <form
-              action=""
-              className="flex flex-col gap-3 w-10/12 m-auto text-white"
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-3 w-10/12 m-auto "
             >
               <div className="flex justify-between">
-                <label htmlFor="name">Nom & Prénom</label>
-                <input type="text" id="name" name="name" />
+                <label htmlFor="name" className="text-white">
+                  Nom & Prénom
+                </label>
+                <input type="text" id="name" name="user_name" />
               </div>
               <div className="flex justify-between">
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" />
+                <label htmlFor="email" className="text-white">
+                  Email
+                </label>
+                <input type="email" name="user_email" id="email" />
               </div>
 
               <div className="flex justify-between">
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message" className="text-white">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   id="message"
@@ -166,7 +191,7 @@ const Home = () => {
                 ></textarea>
               </div>
               <div className="text-black">
-                <Button>Envoyer</Button>
+                <Button onSubmit={sendEmail}>Envoyer</Button>
               </div>
             </form>
             <div className="absolute border-[#B38D7D] opacity-[67%] border-t-4 border-r-4 w-32 h-full -top-3 -right-3"></div>
@@ -182,10 +207,14 @@ const Home = () => {
               Rue joseph Wauters 81, <br />
               Morlanwelz 7140
             </p>
-            <Button>maps</Button>
+            <a href="https://www.google.com/maps/place/Rue+Joseph+Wauters+81,+7140+Morlanwelz/@50.4548434,4.2470135,17z/data=!3m1!4b1!4m6!3m5!1s0x47c2374ae79c3e87:0xc75b43b16bf7a9ef!8m2!3d50.4548434!4d4.2470135!16s%2Fg%2F11flg321m3?entry=ttu">
+              <Button>maps</Button>
+            </a>
           </div>
           <div className="flex justify-end basis-[40%]">
-            <img src={"/maps.png"} alt="carte géographique" className=" " />
+            <a href="https://www.google.com/maps/place/Rue+Joseph+Wauters+81,+7140+Morlanwelz/@50.4548434,4.2470135,17z/data=!3m1!4b1!4m6!3m5!1s0x47c2374ae79c3e87:0xc75b43b16bf7a9ef!8m2!3d50.4548434!4d4.2470135!16s%2Fg%2F11flg321m3?entry=ttu">
+              <img src={"/maps.png"} alt="carte géographique" className=" " />
+            </a>
           </div>
           <div className=" absolute w-full h-full bg-[#837067] opacity-[40%] -z-10 -bottom-3 -left-3"></div>
         </div>

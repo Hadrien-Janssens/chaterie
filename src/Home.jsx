@@ -14,11 +14,11 @@ const Home = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAIL_JS_SERVICE,
+        import.meta.env.VITE_EMAIL_JS_SERVICE,
         "template_d8ibw66",
         form.current,
         {
-          publicKey: process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY,
+          publicKey: import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY,
         }
       )
       .then(

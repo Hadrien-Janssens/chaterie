@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
@@ -24,8 +24,37 @@ const Nav = () => {
             </button>
           )}
         </div>
-
         <BurgerMenu />
+        <ul className=" gap-5 hidden sm:flex font-bold font-poetsenone text-gray-700">
+          <li>
+            <NavLink to={"/"} onClick={() => setIsOpen(!isOpen)}>
+              <p className="hover:text-[#B38D7D] duration-100 text-xl">
+                Accueil
+              </p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/elevage"} onClick={() => setIsOpen(!isOpen)}>
+              <p className="hover:text-[#B38D7D] duration-100 text-xl">
+                Elevage
+              </p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/chatons"} onClick={() => setIsOpen(!isOpen)}>
+              <p className="hover:text-[#B38D7D] duration-100 text-xl">
+                Nos chatons
+              </p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/reproducteurs"} onClick={() => setIsOpen(!isOpen)}>
+              <p className="hover:text-[#B38D7D] duration-100 text-xl">
+                Nos chats
+              </p>
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </div>
   );

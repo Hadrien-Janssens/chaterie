@@ -49,7 +49,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="m-5 relative mt-20">
+    <div className=" relative mt-20 max-w-[500px] mx-auto w-full ">
       <img
         src={"/chat-rogolo.png"}
         width={150}

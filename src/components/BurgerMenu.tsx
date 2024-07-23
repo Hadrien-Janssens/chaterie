@@ -39,7 +39,7 @@ const BurgerMenu = () => {
   return (
     <>
       <motion.div
-        className="flex flex-col w-10 h-6 items-end justify-between z-[300] cursor-pointer "
+        className="flex flex-col w-10 h-6 items-end justify-between z-[9999] cursor-pointer sm:hidden"
         animate={isOpen ? "open" : "close"}
         onClick={() => setIsOpen(!isOpen)}
         variants={container}
@@ -62,21 +62,21 @@ const BurgerMenu = () => {
         ></motion.div>
       </motion.div>
       <motion.div
-        className="absolute w-full h-screen top-0 bg-white z-50 flex flex-col items-center justify-center gap-5 text-3xl font-bold"
+        className="absolute w-full h-screen top-0 bg-white z-50 flex flex-col items-center justify-center gap-5 text-3xl font-bold font-poetsenone "
         animate={isOpen ? "open" : "close"}
         variants={menu}
       >
         <NavLink to={"/"} onClick={() => setIsOpen(!isOpen)}>
-          Accueil
+          <p className="hover:text-[#B38D7D] duration-100">Accueil</p>
         </NavLink>
         <NavLink to={"/elevage"} onClick={() => setIsOpen(!isOpen)}>
-          Elevage
+          <p className="hover:text-[#B38D7D] duration-100">Elevage</p>
         </NavLink>
         <NavLink to={"/chatons"} onClick={() => setIsOpen(!isOpen)}>
-          Nos chatons
+          <p className="hover:text-[#B38D7D] duration-100">Nos chatons</p>
         </NavLink>
         <NavLink to={"/reproducteurs"} onClick={() => setIsOpen(!isOpen)}>
-          Nos chats
+          <p className="hover:text-[#B38D7D] duration-100">Nos chats</p>
         </NavLink>
       </motion.div>
     </>

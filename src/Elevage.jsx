@@ -7,7 +7,7 @@ const page = () => {
   return (
     <>
       <Nav />
-      <div className="m-5 text-justify">
+      <div className="mx-5 text-justify max-w-[800px] md:mx-auto">
         <div className="relative my-10">
           <TitleSection title="Qui sommes-nous?" />
           {/* <div className="h-1 w-1/2 absolute -top-5 bg-[#51687F] opacity-[70%] "></div>
@@ -95,8 +95,8 @@ const page = () => {
             className=" absolute -top-[62px] right-5 z-10 w-[70px]"
           />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

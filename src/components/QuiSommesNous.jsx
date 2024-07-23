@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const QuiSommesNous = () => {
   return (
-    <div className=" mt-10 max-w-[600px] grow mx-auto ">
+    <div className=" mt-10 max-w-[500px] grow mx-auto ">
       <div className="bg-[#51687F] p-3 sm:p-5 relative">
         <div className="bg-[#837067] opacity-[40%] h-32 w-32 absolute -top-2 -left-2 -z-10"></div>
         <h3 className="text-[#B38D7D] text-2xl font-bold  ">

@@ -2,7 +2,11 @@ import { CgGenderMale } from "react-icons/cg";
 
 import Button from "./Button";
 import { NavLink } from "react-router-dom";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 const CatCard = ({ chaton }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="bg-white  p-7 relative">
       <div className="flex flex-row-reverse justify-center gap-10">
@@ -19,7 +23,7 @@ const CatCard = ({ chaton }) => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col">
+        <div className=" flex flex-col" ref={ref}>
           <h3 className="text-[#837067] opacity-[60%] font-extrabold text-lg font-poetsenone">
             <div className="flex items-center gap-1 mt-5">
               {chaton.name}
@@ -31,8 +35,22 @@ const CatCard = ({ chaton }) => {
             <Button>Voir plus</Button>
           </NavLink>
 
-          <div className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-t-4 border-l-4 top-5 left-5"></div>
-          <div className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-b-4 border-l-4 bottom-5 left-5"></div>
+          <div
+            className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-t-4 border-l-4 top-5 left-5"
+            style={{
+              transform: isInView ? "none" : "translateX(-200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          ></div>
+          <div
+            className="absolute w-[20%] h-[20%] border-[#51687F] opacity-[70%] border-b-4 border-l-4 bottom-5 left-5"
+            style={{
+              transform: isInView ? "none" : "translateX(-200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          ></div>
         </div>
       </div>
       <p className="text-justify mt-5 mb-2 w-11/12 m-auto">

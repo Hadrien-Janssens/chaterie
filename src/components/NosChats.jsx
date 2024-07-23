@@ -28,7 +28,7 @@ const NosChats = () => {
           </div>
         </div>
         <div className="basis-[50%] text-center border-t-2 border-r-2 border-[#B38D7D] opacity-[100%] pb-3 -z-50">
-          <div className="overflow-hidden max-h-[200px] flex items-center justify-center ">
+          <div className="overflow-hidden max-h-[200px] flex items-center justify-center z-[9999] ">
             <img
               src={"/reproducteurs.png"}
               alt="dessin d'un chat"
@@ -38,7 +38,7 @@ const NosChats = () => {
           <h4 className="font-bold pb-1">
             Nos <br /> reproducteurs
           </h4>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <NavLink to={"/reproducteurs"}>
               <Button>Découvrir</Button>
             </NavLink>

@@ -27,28 +27,28 @@ const Nav = () => {
         <BurgerMenu />
         <ul className=" gap-5 hidden sm:flex font-bold font-poetsenone text-gray-700">
           <li>
-            <NavLink to={"/"} onClick={() => setIsOpen(!isOpen)}>
+            <NavLink to={"/"}>
               <p className="hover:text-[#B38D7D] duration-100 text-xl">
                 Accueil
               </p>
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/elevage"} onClick={() => setIsOpen(!isOpen)}>
+            <NavLink to={"/elevage/"}>
               <p className="hover:text-[#B38D7D] duration-100 text-xl">
                 Elevage
               </p>
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/chatons"} onClick={() => setIsOpen(!isOpen)}>
+            <NavLink to={"/chatons/"}>
               <p className="hover:text-[#B38D7D] duration-100 text-xl">
                 Nos chatons
               </p>
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/reproducteurs"} onClick={() => setIsOpen(!isOpen)}>
+            <NavLink to={"/reproducteurs/"}>
               <p className="hover:text-[#B38D7D] duration-100 text-xl">
                 Nos chats
               </p>

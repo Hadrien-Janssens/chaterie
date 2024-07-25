@@ -65,7 +65,7 @@ const Contact = () => {
           onSubmit={sendEmail}
           className="flex flex-col gap-3 w-10/12 m-auto "
         >
-          <div className="flex justify-between">
+          <div className="flex flex-col justify-between sm:flex-row">
             <label htmlFor="name" className="text-white">
               Nom & Prénom
             </label>
@@ -77,7 +77,7 @@ const Contact = () => {
               onChange={handleName}
             />
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-col justify-between sm:flex-row">
             <label htmlFor="email" className="text-white">
               Email
             </label>
@@ -90,7 +90,7 @@ const Contact = () => {
             />
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col justify-between sm:flex-row">
             <label htmlFor="message" className="text-white">
               Message
             </label>

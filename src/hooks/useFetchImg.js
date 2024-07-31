@@ -5,11 +5,13 @@ const useFetchImg = (id) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  //www.dashboardchatterie.hadrien-janssens.com/
+
+  http: useEffect(() => {
     const fetchImg = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8888/api_chatterie/api/models/fetchImg.php?id=${id}`
+          `http://www.dashboardchatterie.hadrien-janssens.com/api/models/fetchImg.php?id=${id}`
         );
         const data = await res.json();
         setImg(data);

@@ -5,11 +5,12 @@ const useFetchAllCats = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // http://www.dashboardchatterie.hadrien-janssens.com/
   useEffect(() => {
     const fetchAllCats = async () => {
       try {
         const res = await fetch(
-          "http://localhost:8888/api_chatterie/api/controllers/fetchAllCats.php"
+          "http://www.dashboardchatterie.hadrien-janssens.com/api/controllers/fetchAllCats.php"
         );
         const data = await res.json();
         setCats(data);

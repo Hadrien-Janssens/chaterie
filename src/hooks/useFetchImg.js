@@ -11,7 +11,7 @@ const useFetchImg = (id) => {
     const fetchImg = async () => {
       try {
         const res = await fetch(
-          `http://www.dashboardchatterie.hadrien-janssens.com/api/models/fetchImg.php?id=${id}`
+          `https://www.dashboardchatterie.hadrien-janssens.com/api/models/fetchImg.php?id=${id}`
         );
         const data = await res.json();
         setImg(data);

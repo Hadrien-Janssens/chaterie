@@ -10,7 +10,7 @@ const useFetchAllCats = () => {
     const fetchAllCats = async () => {
       try {
         const res = await fetch(
-          "http://www.dashboardchatterie.hadrien-janssens.com/api/controllers/fetchAllCats.php"
+          "https://www.dashboardchatterie.hadrien-janssens.com/api/controllers/fetchAllCats.php"
         );
         const data = await res.json();
         setCats(data);
